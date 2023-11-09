@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace Tasks_9Nov._2
 {
-    internal class LectureLesson : PracticalLesson
+    internal class LectureLesson : Lesson
     {
         private string _description { get; }
 
