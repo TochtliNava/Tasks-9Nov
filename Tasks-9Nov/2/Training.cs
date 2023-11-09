@@ -1,16 +1,42 @@
 ﻿using System;
 using System.Text;
 using System.Threading.Tasks;
+using Tasks_9Nov._2;
 
 namespace Tasks_9Nov
 {
     public class Training
     {
         private string _description;
+        private Lesson[] _resources = new Lesson[0];
 
-        public Training(string description) 
+        public Training(string description)
         {
             _description = description;
+        }
+
+        public void Add(Lesson lesson)
+        {
+            int resourcesSize = _resources.Length + 1;
+            Lesson[] tempResources = new Lesson[resourcesSize];
+            for (int index = 0; index < _resources.Length; index++)
+            {
+                tempResources[index] = _resources[index];
+            }
+            tempResources[resourcesSize - 1] = lesson;
+            _resources = tempResources;
+        }
+
+        public bool IsPractical()
+        {
+            foreach (var resource in _resources) 
+            {
+                if (resource is LectureLesson)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }

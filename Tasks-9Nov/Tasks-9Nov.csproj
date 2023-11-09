@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="2\DiagonalMatrix.cs" />
+    <Compile Include="2\LectureLesson.cs" />
     <Compile Include="2\Lesson.cs" />
     <Compile Include="2\Point.cs" />
     <Compile Include="2\PracticalLesson.cs" />
