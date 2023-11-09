@@ -6,8 +6,8 @@ namespace Tasks_9Nov
 {
     public class Point
     {
-        private int[] _coordinates { get; } = new int[3];
-        private double _mass { get; } = 0;
+        private int[] _coordinates = new int[3];
+        private double _mass = 0;
 
         public Point(int x, int y, int z, double mass)
         {

@@ -4,7 +4,8 @@ using System.Threading.Tasks;
 
 namespace Tasks_9Nov
 {
-    internal class DiagonalMatrix
+    public class DiagonalMatrix
     {
+
     }
 }
