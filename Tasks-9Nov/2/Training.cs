@@ -8,17 +8,17 @@ namespace Tasks_9Nov
     public class Training
     {
         private string _description;
-        private Lesson[] _resources = new Lesson[0];
+        private PracticalLesson[] _resources = new PracticalLesson[0];
 
         public Training(string description)
         {
             _description = description;
         }
 
-        public void Add(Lesson lesson)
+        public void Add(PracticalLesson lesson)
         {
             int resourcesSize = _resources.Length + 1;
-            Lesson[] tempResources = new Lesson[resourcesSize];
+            PracticalLesson[] tempResources = new PracticalLesson[resourcesSize];
             for (int index = 0; index < _resources.Length; index++)
             {
                 tempResources[index] = _resources[index];

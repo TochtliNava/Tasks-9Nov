@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tasks_9Nov
 {
-    public class PracticalLesson : Lesson
+    public class PracticalLesson : PracticalLesson
     {
         private string _description { get; }
         private string _linkTask;
