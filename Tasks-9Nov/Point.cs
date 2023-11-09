@@ -6,10 +6,10 @@ namespace Tasks_9Nov
 {
     public class Point
     {
-        private int[] _coordinates { get; }
-        private float _mass { get; }
+        private int[] _coordinates { get; } = new int[3];
+        private double _mass { get; }
 
-        public Point(int x, int y, int z, float mass)
+        public Point(int x, int y, int z, double mass)
         {
             _coordinates[0] = x;
             _coordinates[1] = y;
@@ -24,7 +24,7 @@ namespace Tasks_9Nov
             }
         }
 
-        public float GetMass()
+        public double GetMass()
         {
             return _mass;
         }
@@ -58,9 +58,9 @@ namespace Tasks_9Nov
         // d = `/(x2 - x1)^2 + (y2 - y1)^2 + (z2 - z1)^2
         public double CalculateDistance(Point point)
         {
-            double distance = (point.GetCoordinateX() - GetCoordinateX()) ^ 2 +
-                              (point.GetCoordinateY() - GetCoordinateY()) ^ 2 +
-                              (point.GetCoordinateZ() - GetCoordinateZ()) ^ 2;
+            double distance = Math.Pow(Convert.ToDouble(point.GetCoordinateX()) - Convert.ToDouble(GetCoordinateX()), Convert.ToDouble(2)) +
+                              Math.Pow(Convert.ToDouble(point.GetCoordinateY()) - Convert.ToDouble(GetCoordinateY()), Convert.ToDouble(2)) +
+                              Math.Pow(Convert.ToDouble(point.GetCoordinateZ()) - Convert.ToDouble(GetCoordinateZ()), Convert.ToDouble(2));
             distance = Math.Sqrt(distance);
             return distance;
         }
