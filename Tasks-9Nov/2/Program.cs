@@ -45,10 +45,15 @@ namespace Tasks_9Nov
             training2.Add(lesson);
             training2.Add(lecture);
 
+            //  Clone
+            Training cloned = training.Clone();
+
             bool isPractical = training.IsPractical();  // true
             isPractical = training2.IsPractical();      // false
 
+            int[] diagonal = {};
 
+            DiagonalMatrix matrix = new DiagonalMatrix(diagonal);
         }
     }
 }

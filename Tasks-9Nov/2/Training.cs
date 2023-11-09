@@ -38,5 +38,13 @@ namespace Tasks_9Nov
             }
             return true;
         }
+
+        public Training Clone()
+        {
+            Training clone = (Training) this.MemberwiseClone();
+            clone._description = string.Copy(_description);
+            clone._resources = (Lesson[]) _resources.Clone();
+            return clone;
+        }
     }
 }

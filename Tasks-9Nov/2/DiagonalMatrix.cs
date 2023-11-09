@@ -6,15 +6,25 @@ namespace Tasks_9Nov
 {
     public class DiagonalMatrix
     {
-        private int _size;
+        private int _size = 0;
         public DiagonalMatrix(int[] diagonal) 
         {
-            _size = diagonal.Length;
+            if (diagonal != null)
+            {
+                _size = diagonal.Length;
+            }
         }
 
         public int GetSize()
         {
             return _size;
+        }
+
+        
+
+        public void CreateExtension(DiagonalMatrix matrix)
+        {
+
         }
     }
 }
