@@ -24,24 +24,31 @@ namespace Tasks_9Nov
             //  Test CalculateDistance()
             double distance = point2.CalculateDistance(point1);
 
-            //  Task 2.2
+            //  Task 2.3
 
+            //  Create two training instances to check practical
             Training training = new Training("true");
             Training training2 = new Training("false");
-            
+
+            //  Create 2 lessons
             PracticalLesson lesson = new PracticalLesson(null, null, null);
             PracticalLesson lesson2 = new PracticalLesson(null, null, null);
 
+            // Create a lecture lesson
             LectureLesson lecture = new LectureLesson("POO en México");
             
+            // Add the two practical lessons to training 1
             training.Add(lesson);
             training.Add(lesson2);
 
+            // Add one lecture lesson and one practical lesson
             training2.Add(lesson);
             training2.Add(lecture);
 
             bool isPractical = training.IsPractical();  // true
             isPractical = training2.IsPractical();      // false
+
+
         }
     }
 }
