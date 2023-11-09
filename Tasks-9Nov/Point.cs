@@ -7,18 +7,14 @@ namespace Tasks_9Nov
     public class Point
     {
         private int[] _coordinates { get; } = new int[3];
-        private double _mass { get; }
+        private double _mass { get; } = 0;
 
         public Point(int x, int y, int z, double mass)
         {
             _coordinates[0] = x;
             _coordinates[1] = y;
             _coordinates[2] = z;
-            if (mass < 0)
-            {
-                _mass = 0;
-            }
-            else
+            if (mass > 0)
             {
                 _mass = mass;
             }
